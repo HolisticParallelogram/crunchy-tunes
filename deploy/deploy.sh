@@ -2,7 +2,7 @@
 set -x
 eval `ssh-agent -s` # Start ssh agent
 ssh-add ~/.ssh/id_rsa
-if [ $TRAVIS_BRANCH == 'master' ] ; then
+if [ $TRAVIS_BRANCH == 'deploy' ] ; then
    git init
    git remote add deploy ssh://deploy@159.203.225.145/var/www/frankenstein/.git
    git config user.name "Travis CI"
